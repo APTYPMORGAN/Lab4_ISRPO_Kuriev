@@ -14,4 +14,25 @@ while (isRunning)
     Console.WriteLine("3 - Показать дату");
     Console.WriteLine("4 - Выход");
     Console.Write("\nВыберите пункт меню: ");
+ string num = Console.ReadLine();
+
+switch (num)
+{
+    case "1":
+        Console.WriteLine($"\nФИО: {name}");
+        break;
+    case "2":
+        Console.WriteLine($"\nГруппа: {group}");
+        break;
+    case "3":
+        Console.WriteLine($"\nТекущая дата и время: {DateTime.Now}");
+        break;
+    case "4":
+        Console.WriteLine("\nДо свидания!");
+        isRunning = false;
+        break;
+    default:
+        Console.WriteLine("\nНеверный ввод");
+        break;
+    }
 }
